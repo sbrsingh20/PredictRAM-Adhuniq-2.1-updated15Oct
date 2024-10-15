@@ -78,7 +78,7 @@ indicators = {
         'Leading': ['Crude Oil Prices', 'Energy Demand Trends'],
         'Lagging': ['Refined Product Output', 'Profit Margins']
     },
-    'Manufacture of Chemicals and Chemical Products': {
+    'Manufacture of Chemicals And Chemical Products': {
         'Leading': ['Raw Material Prices', 'Industrial Production Data'],
         'Lagging': ['Production Data', 'Sales Revenue']
     },
@@ -131,32 +131,32 @@ indicators = {
         'Lagging': ['Production Output', 'Sales Data']
     },
     'India Inflation CPI (Consumer Price Index)': {
-        'Leading': ['Consumer Spending Trends', 'Wage Growth', 'Raw Material Prices'],
-        'Lagging': ['Previous CPI Data', 'Retail Sales Data', 'Employment Cost Index']
+        'Leading': ['Retail Sales Growth', 'M2 Money Supply Growth'],
+        'Lagging': ['Producer Price Index PPI', 'GDP Growth']
     },
     'India Inflation WPI (Wholesale Price Index)': {
         'Leading': ['Producer Price Trends', 'Raw Material Prices', 'Commodity Prices'],
         'Lagging': ['Previous WPI Data', 'Import and Export Prices', 'Manufacturing Output Data']
     },
     'India GDP Growth': {
-        'Leading': ['Business Investment', 'Consumer Confidence Index', 'Industrial Production'],
-        'Lagging': ['Previous GDP Data', 'Employment Data', 'Corporate Earnings']
+        'Leading': ['Business Investment', 'Raw Material Prices', 'Production Output'],
+        'Lagging': ['Sales Data']
     },
     'RBI Interest Rate': {
-        'Leading': ['Inflation Data', 'Economic Growth Data', 'Global Interest Rates'],
-        'Lagging': ['Previous RBI Interest Rates', 'Credit Growth Data', 'Inflation Adjustments']
+        'Leading': ['Credit Growth Data'],
+        'Lagging': ['RBI Interest Rates', 'Economic Growth Data', 'Inflation Data']
     },
     'India Infrastructure Output': {
-        'Leading': ['Building Permits', 'Government Infrastructure Spending', 'Construction Sector Activity'],
-        'Lagging': ['Previous Infrastructure Output Data', 'Project Completion Rates', 'Employment in Construction Sector']
+        'Leading': ['Building Permits', 'Government Infrastructure Spending'],
+        'Lagging': ['Project Completion Rates', 'Employment in Construction Sector']
     },
     'India Banks Loan Growth Rate': {
-        'Leading': ['Consumer Confidence', 'Business Investment Trends', 'Interest Rate Trends'],
-        'Lagging': ['Previous Loan Growth Data', 'Bank Credit Demand', 'Non-Performing Loans']
+        'Leading': ['Business Investment Trends', 'Interest Rate Trends'],
+        'Lagging': ['Bank Credit Demand', 'Non-Performing Loans']
     },
     'India Forex FX Reserves': {
-        'Leading': ['Trade Balance Data', 'Foreign Investment Inflows', 'Global Economic Conditions'],
-        'Lagging': ['Previous Forex Reserves Data', 'Currency Exchange Rates', 'International Financial Assistance']
+        'Leading': ['Trade Balance Data', 'Foreign Investment Inflows'],
+        'Lagging': ['Previous Forex Reserves Data', 'Currency Exchange Rates']
     }
 }
 
