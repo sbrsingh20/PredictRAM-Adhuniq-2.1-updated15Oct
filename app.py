@@ -22,6 +22,17 @@ def load_data():
     
     # Load correlation results
     correlation_results = pd.read_excel(os.path.join(stock_data_folder, 'Manufacture_of_Food_Products_correlation_results.xlsx'))
+    correlation_results = pd.read_excel(os.path.join(stock_data_folder, 'India_GDP_Growth_correlation_result.xlsx'))
+    correlation_results = pd.read_excel(os.path.join(stock_data_folder, 'India_Inflation_CPI_Consumer_Price_Index_correlation_result.xlsx'))
+    correlation_results = pd.read_excel(os.path.join(stock_data_folder, 'RBI_Interest_Rate_correlation_result.xlsx'))
+    correlation_results = pd.read_excel(os.path.join(stock_data_folder, 'India_Infrastructure_Output_correlation_result.xlsx'))
+    correlation_results = pd.read_excel(os.path.join(stock_data_folder, 'Manufacture_of_Basic_Metals_correlation_result.xlsx'))
+    correlation_results = pd.read_excel(os.path.join(stock_data_folder, 'Manufacture_of_Beverages_correlation_result.xlsx'))
+    correlation_results = pd.read_excel(os.path.join(stock_data_folder, 'Manufacture_of_Chemicals_And_Chemical_Products_correlation_result.xlsx'))
+    correlation_results = pd.read_excel(os.path.join(stock_data_folder, 'Manufacture_of_Coke_And_Refined_Petroleum_Products_correlation_result.xlsx'))
+    correlation_results = pd.read_excel(os.path.join(stock_data_folder, 'Manufacture_of_Furniture_correlation_result.xlsx'))
+    correlation_results = pd.read_excel(os.path.join(stock_data_folder, 'Manufacture_of_Textiles_correlation_result.xlsx'))
+    correlation_results = pd.read_excel(os.path.join(stock_data_folder, 'Other_Manufacturing_correlation_result.xlsx'))
     
     # Load financial data
     financial_data = {}
