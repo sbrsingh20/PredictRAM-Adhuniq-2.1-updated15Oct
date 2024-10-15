@@ -33,6 +33,7 @@ def load_data():
     correlation_results = pd.read_excel(os.path.join(stock_data_folder, 'Manufacture_of_Furniture_correlation_result.xlsx'))
     correlation_results = pd.read_excel(os.path.join(stock_data_folder, 'Manufacture_of_Textiles_correlation_result.xlsx'))
     correlation_results = pd.read_excel(os.path.join(stock_data_folder, 'Other_Manufacturing_correlation_result.xlsx'))
+    correlation_results = pd.read_excel(os.path.join(stock_data_folder, 'India_GDP_Growth_correlation_result.xlsx'))
     
     # Load financial data
     financial_data = {}
