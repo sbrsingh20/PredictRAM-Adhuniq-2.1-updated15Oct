@@ -33,7 +33,7 @@ def load_data():
     correlation_results = pd.read_excel(os.path.join(stock_data_folder, 'Manufacture_of_Furniture_correlation_result.xlsx'))
     correlation_results = pd.read_excel(os.path.join(stock_data_folder, 'Manufacture_of_Textiles_correlation_result.xlsx'))
     correlation_results = pd.read_excel(os.path.join(stock_data_folder, 'Other_Manufacturing_correlation_result.xlsx'))
-    
+
     # Load financial data
     financial_data = {}
     financial_folder = 'financial'
@@ -183,6 +183,7 @@ def interpret_correlation(value):
         return "Slight Negative"
     else:
         return "Strong Negative"
+        
 
 # Function to adjust correlation values based on prediction
 def adjust_correlation(correlation_value, predicted_value, industry_mean):
@@ -230,79 +231,79 @@ def get_detailed_interpretation(parameter_name, correlation_interpretation):
         },
         "correlation with Total Operating Expense": {
             "Slight Positive": (
-                "* **Economic Context**: A slight increase in operating expenses associated with this metric suggests modest operational growth or rising costs in India. This could reflect factors such as increased production scale, higher raw material costs, or incremental investments in operations. Globally, similar trends might be observed in growing markets or due to rising input costs.\n"
-                "* **Business Strategies**: Companies might be experiencing increased operational costs due to expansion efforts or higher input costs. To manage these expenses, businesses should focus on efficiency improvements, cost control measures, and strategic procurement.\n"
-                "* **Financial Environment**: A slightly positive trend in operating expenses indicates stable but increasing cost pressures. Companies may need to navigate moderate inflation or rising costs of raw materials and services.\n"
-                "* **Global Conditions**: Globally, this trend could be related to increasing costs in production or supply chains. Businesses should monitor global cost trends and adjust their strategies accordingly.\n"
-                "* **Strategy for Investors**: Investors should be aware of rising operational costs as a potential risk factor. It’s essential to assess how well companies manage their expenses and whether they have strategies in place to maintain profitability despite rising costs."
+                "* **Economic Context**: A slight increase in operating expenses suggests modest operational growth or rising costs in India. This could reflect factors like increased production scale, higher raw material costs, or incremental investments. Globally, similar trends might be observed in growing markets or due to rising input costs.\n"
+                "* **Business Strategies**: Companies might face increased costs due to expansion or higher input prices. Focus on efficiency improvements, cost control measures, and strategic procurement to manage these expenses.\n"
+                "* **Financial Environment**: A slightly positive trend suggests stable but increasing cost pressures. Companies might face moderate inflation or rising costs of raw materials and services.\n"
+                "* **Global Conditions**: This could be related to increasing costs in production or supply chains. Monitor global cost trends and adjust strategies accordingly.\n"
+                "* **Strategy for Investors**: Investors should be cautious, assessing how well companies manage rising costs. Review companies' cost management strategies to ensure profitability remains intact."
             ),
             "Strong Positive": (
-                "* **Economic Context**: A significant increase in operating expenses linked to this metric indicates substantial operational expansion or significant cost pressures in India. This might be due to major investments in infrastructure, increased production scale, or significant rises in input costs. Globally, this trend could reflect widespread cost inflation or substantial operational growth.\n"
-                "* **Business Strategies**: Companies may be facing high operational costs due to large-scale expansions, significant increases in input prices, or major upgrades in technology and infrastructure. Effective cost management strategies, including cost-benefit analyses and operational efficiencies, are crucial.\n"
-                "* **Financial Environment**: A strong positive trend suggests substantial cost pressures. Companies should focus on financial planning and cost control measures to manage the impact on their profitability.\n"
-                "* **Global Conditions**: Globally, this trend could be driven by widespread cost increases or significant growth in operational activities. Companies should be prepared for similar trends in international markets and adjust their strategies accordingly.\n"
-                "* **Strategy for Investors**: Investors should closely monitor companies' ability to manage rising operational costs. It is important to evaluate whether increased expenses are leading to higher revenues and whether companies have strategies in place to maintain profitability."
+                "* **Economic Context**: A significant rise in operating expenses may indicate substantial growth or high-cost pressures. This could be due to large-scale expansions, increased input prices, or investments in technology and infrastructure.\n"
+                "* **Business Strategies**: Companies may face high operational costs due to large expansions or rising input costs. Implementing cost-benefit analysis and efficiency improvements is crucial.\n"
+                "* **Financial Environment**: Substantial cost pressures require strategic financial planning. Companies should focus on managing rising operational costs to prevent reduced profitability.\n"
+                "* **Global Conditions**: Widespread cost inflation or global expansions could drive this trend. Companies need to account for international cost trends in their strategies.\n"
+                "* **Strategy for Investors**: Investors should closely monitor the ability of companies to manage operational costs and whether increased expenses align with revenue growth."
             ),
             "Neutral": (
-                "* **Economic Context**: A Neutral correlation with operating expenses suggests that changes in operating costs are not significantly affecting or being affected by broader economic conditions in India. This may indicate stable operational efficiency or balanced cost management.\n"
-                "* **Business Strategies**: Businesses are likely managing their operating expenses effectively, with no major fluctuations impacting overall performance. Maintaining this balance is key to sustaining profitability.\n"
-                "* **Financial Environment**: The financial environment remains stable with no significant changes in cost pressures. Companies should continue to monitor their cost structures and adapt to any emerging trends.\n"
-                "* **Global Conditions**: Globally, a neutral correlation indicates stable operating costs with no major external influences affecting expenses. Companies should remain aware of any potential changes in global cost conditions.\n"
-                "* **Strategy for Investors**: Investors should focus on companies with stable cost management practices. While a neutral trend may suggest stability, ongoing vigilance is necessary to ensure that cost structures remain optimized."
+                "* **Economic Context**: Neutral correlation suggests no significant change in operating expenses. The cost structure is stable, indicating balanced operations.\n"
+                "* **Business Strategies**: Companies are maintaining steady operational efficiency. There are no significant fluctuations in operating expenses that would require new strategies.\n"
+                "* **Financial Environment**: Stable costs suggest predictable financial conditions with no new pressures.\n"
+                "* **Global Conditions**: Globally, this reflects steady costs. Companies should be prepared for any sudden shifts but expect stability in the near term.\n"
+                "* **Strategy for Investors**: Investors should maintain current positions and keep an eye on possible emerging trends in the company's financial and operational strategies."
             ),
             "Slight Negative": (
-                "* **Economic Context**: A slight decrease in operating expenses associated with this metric might suggest minor improvements in cost efficiency or operational reductions in India. This could be due to cost-cutting measures, process optimizations, or reductions in input prices.\n"
-                "* **Business Strategies**: Companies might be benefiting from cost reductions or improved operational efficiencies. Continued focus on cost management and efficiency improvements can help sustain this trend.\n"
-                "* **Financial Environment**: A slightly negative trend in operating expenses indicates decreasing cost pressures. Companies may benefit from lower inflation rates or reduced input costs.\n"
-                "* **Global Conditions**: Globally, this trend might reflect improving cost conditions or efficiency gains. Companies should stay informed about global cost trends and leverage opportunities for cost savings.\n"
-                "* **Strategy for Investors**: Investors should consider the impact of decreasing operational costs on overall profitability. It’s important to assess whether these reductions are sustainable and if they contribute to improved financial performance."
+                "* **Economic Context**: A slight decrease in operating expenses might reflect minor efficiency gains or cost reductions. This could result from small process optimizations or lower input prices.\n"
+                "* **Business Strategies**: Companies can capitalize on cost reductions by maintaining focus on efficiency. Continued cost control will help boost profitability.\n"
+                "* **Financial Environment**: The slight decline in costs suggests moderate improvements in financial health as operational expenses decrease.\n"
+                "* **Global Conditions**: Global trends of cost reduction may benefit the company. This should be leveraged for operational growth.\n"
+                "* **Strategy for Investors**: Investors should view decreasing costs positively, especially if the company can maintain or improve margins. Look for sustained reductions to maximize profits."
             ),
             "Strong Negative": (
-                "* **Economic Context**: A significant decrease in operating expenses linked to this metric indicates major improvements in cost management or significant reductions in operational costs in India. This might be due to extensive cost-cutting measures, significant reductions in input costs, or operational streamlining. Globally, similar trends could reflect widespread cost reductions or operational efficiencies.\n"
-                "* **Business Strategies**: Companies likely have implemented effective cost-cutting strategies or streamlined operations significantly. It’s essential to ensure that cost reductions do not compromise operational capabilities or long-term growth.\n"
-                "* **Financial Environment**: A strong negative trend suggests substantial decreases in operational costs. Companies should capitalize on these cost savings to enhance profitability and invest in growth opportunities.\n"
-                "* **Global Conditions**: On a global scale, this trend could be related to extensive cost reductions or improvements in operational efficiency. Companies should remain vigilant about maintaining efficiency and monitoring global cost trends.\n"
-                "* **Strategy for Investors**: Investors should view strong reductions in operating expenses positively if they contribute to improved profitability. However, it’s crucial to ensure that cost reductions do not negatively impact the company’s growth potential or operational effectiveness."
+                "* **Economic Context**: A significant drop in operating expenses indicates major cost reductions, likely driven by efficiency improvements or strategic changes.\n"
+                "* **Business Strategies**: Companies implementing strong cost-cutting measures or process streamlining could see major gains in profitability. It is essential to balance cost reductions with operational effectiveness.\n"
+                "* **Financial Environment**: Strongly negative expenses indicate financial improvement. Companies must reinvest savings into areas for future growth.\n"
+                "* **Global Conditions**: Globally, cost reductions can enhance competitive positioning. The business should continue to monitor international cost trends.\n"
+                "* **Strategy for Investors**: Strong reductions in operating expenses should be seen positively, as long as operational capacity remains intact. Look for long-term strategic initiatives alongside cost management."
             )
         },
         "correlation with Operating Income/Profit": {
             "Slight Positive": (
-                "* **Economic Context**: A slight increase in operating income/profit associated with this metric suggests modest improvements in operational performance or cost management in India. This could indicate minor enhancements in revenue generation or operational efficiency. Globally, similar trends might be due to gradual economic recovery or improvements in market conditions.\n"
-                "* **Business Strategies**: Companies may experience a slight uplift in operating income/profit due to incremental improvements in business operations, cost control measures, or minor increases in revenue. Continued focus on operational efficiency and effective cost management is crucial.\n"
-                "* **Financial Environment**: A slightly positive trend in operating income/profit suggests stable financial conditions with moderate improvements. Companies might benefit from gradual reductions in operational costs or slight increases in revenue.\n"
-                "* **Global Conditions**: Globally, a slight positive correlation might reflect gradual improvements in operational performance or market conditions. Companies should monitor global trends that could impact their operating income/profit.\n"
-                "* **Strategy for Investors**: Investors should be cautious but optimistic about the slight positive trend. While modest improvements are encouraging, they may not yet justify major investment decisions. It is advisable to keep an eye on ongoing operational performance and market conditions."
+                "* **Economic Context**: A slight increase in operating income indicates modest improvements in business operations or cost control. This could be due to small revenue gains or increased efficiencies.\n"
+                "* **Business Strategies**: Focus on optimizing operations to sustain profit growth. Further process improvements could lead to stronger operating income results.\n"
+                "* **Financial Environment**: A slightly positive trend in operating income suggests a stable financial environment with moderate improvements in margins.\n"
+                "* **Global Conditions**: Globally, this may reflect slight improvements in operational performance. Stay aware of potential cost drivers that could affect profitability.\n"
+                "* **Strategy for Investors**: Investors should cautiously monitor the slight upward trend in profitability. Small improvements may indicate future potential for stronger earnings."
             ),
             "Strong Positive": (
-                "* **Economic Context**: A significant increase in operating income/profit linked to this metric indicates robust improvements in operational performance or significant cost management successes in India. This could be due to strong revenue growth, substantial operational efficiencies, or successful strategic initiatives. On a global scale, this trend might be driven by major economic recoveries or favorable market conditions.\n"
-                "* **Business Strategies**: Companies experiencing strong positive correlations may be benefiting from major operational improvements, successful product innovations, or significant revenue growth. Effective cost management and strategic investments are likely contributing to higher operating income/profit.\n"
-                "* **Financial Environment**: A strong positive trend in operating income/profit suggests favorable financial conditions, such as strong revenue growth, reduced operational costs, or improved profit margins. Companies may see substantial gains in profitability and operational efficiency.\n"
-                "* **Global Conditions**: Globally, this trend might reflect significant improvements in market conditions or economic recoveries. Companies should leverage this positive momentum to further enhance their operational performance and profitability.\n"
-                "* **Strategy for Investors**: Investors should view strong positive correlations favorably, considering them a sign of robust operational performance and potential for higher returns. Increasing investments in companies demonstrating significant improvements in operating income/profit could be beneficial."
+                "* **Economic Context**: A strong positive correlation with operating income signifies robust operational performance. Companies are likely benefiting from high revenue growth or significant operational efficiencies.\n"
+                "* **Business Strategies**: Strong operational gains call for continued focus on growth strategies and scaling efficient operations.\n"
+                "* **Financial Environment**: Substantial improvements in operating income suggest an optimal financial environment, with businesses seeing strong returns on investments.\n"
+                "* **Global Conditions**: Globally, favorable market conditions and economic recovery may be contributing to these strong results. Companies should capitalize on international opportunities.\n"
+                "* **Strategy for Investors**: Strong positive operating income results should encourage investors to increase their exposure to such businesses, as they are likely to continue outperforming in the market."
             ),
             "Neutral": (
-                "* **Economic Context**: A Neutral correlation with operating income/profit suggests that changes in this metric are not significantly influenced by broader economic conditions in India. This may indicate stable operational performance with no major fluctuations affecting profitability.\n"
-                "* **Business Strategies**: Companies are likely maintaining steady operational performance with no significant changes in operating income/profit. Focus should remain on sustaining current strategies and managing costs effectively.\n"
-                "* **Financial Environment**: The financial environment is stable with no major changes impacting operating income/profit. Companies should continue to monitor their financial health and operational performance.\n"
-                "* **Global Conditions**: Globally, a neutral correlation indicates stable conditions with no significant impacts on operating income/profit. Companies should stay aware of global trends but expect no major changes in profitability.\n"
-                "* **Strategy for Investors**: Investors should maintain a steady approach, monitoring the company's operational performance and financial health. While a neutral trend suggests stability, it’s important to stay alert for any emerging trends or changes."
+                "* **Economic Context**: A neutral correlation in operating income suggests stable business performance. Companies are not significantly affected by broader economic conditions.\n"
+                "* **Business Strategies**: Businesses should focus on maintaining efficiency, as current strategies are keeping operations steady.\n"
+                "* **Financial Environment**: Financial conditions are stable, leading to predictable income levels. There’s no immediate cause for concern, but companies should remain vigilant.\n"
+                "* **Global Conditions**: Globally, no major economic impacts are influencing operating income. Companies should prepare for potential changes in market conditions.\n"
+                "* **Strategy for Investors**: Investors should hold their positions in businesses with neutral operating income trends, as there is no immediate risk or opportunity."
             ),
             "Slight Negative": (
-                "* **Economic Context**: A slight decrease in operating income/profit associated with this metric suggests minor challenges in operational performance or cost management in India. This could be due to slight increases in costs, minor revenue declines, or operational inefficiencies. Globally, this might reflect emerging economic or market pressures.\n"
-                "* **Business Strategies**: Companies facing slight negative trends might be dealing with small-scale operational issues or increased costs. Strategies should focus on improving efficiency, cost control, and addressing minor operational challenges.\n"
-                "* **Financial Environment**: A slightly negative trend in operating income/profit indicates modest financial pressures, such as increased operational costs or slight revenue declines. Companies should work on mitigating these pressures through effective cost management and operational improvements.\n"
-                "* **Global Conditions**: Globally, this trend might indicate emerging economic or market pressures affecting profitability. Companies should monitor international conditions and adjust their strategies to maintain profitability.\n"
-                "* **Strategy for Investors**: Investors should be cautious about slight negative trends, evaluating the company's strategies for addressing operational challenges. It’s important to assess whether the company has a plan to reverse the trend and improve profitability."
+                "* **Economic Context**: A slight negative correlation with operating income suggests minor challenges in maintaining profitability, possibly due to increasing costs or operational inefficiencies.\n"
+                "* **Business Strategies**: Companies should address any minor inefficiencies or rising costs that are impacting operating income. Focus on optimizing cost structures.\n"
+                "* **Financial Environment**: A slight negative trend points to minor financial pressures. Companies need to control costs to maintain margins.\n"
+                "* **Global Conditions**: Globally, this may indicate emerging economic pressures. Businesses should adjust to avoid further declines.\n"
+                "* **Strategy for Investors**: Investors should monitor companies with slight negative trends, evaluating their ability to manage operational issues and protect profitability."
             ),
             "Strong Negative": (
-                "* **Economic Context**: A significant decrease in operating income/profit linked to this metric indicates substantial operational or financial difficulties in India. This could be due to severe cost increases, major revenue declines, or significant inefficiencies. On a global scale, this trend might be exacerbated by economic downturns or adverse market conditions.\n"
-                "* **Business Strategies**: Companies experiencing strong negative correlations may be facing severe operational challenges or significant financial difficulties. Comprehensive strategies are needed to address cost issues, operational inefficiencies, and revenue declines.\n"
-                "* **Financial Environment**: A strong negative trend in operating income/profit suggests challenging financial conditions, such as high operational costs, significant revenue declines, or severe market pressures. Companies should implement robust financial strategies to manage these challenges.\n"
-                "* **Global Conditions**: Globally, this trend might reflect broader economic or market disruptions affecting profitability. Companies should focus on global diversification and risk management strategies to counteract adverse effects.\n"
-                "* **Strategy for Investors**: Investors should exercise caution and reassess their investments in companies with strong negative correlations. It may be prudent to explore alternative investments or closely monitor the company’s recovery strategies and overall financial health."
+                "* **Economic Context**: A strong negative correlation with operating income indicates severe operational or financial difficulties, such as high costs or substantial inefficiencies.\n"
+                "* **Business Strategies**: Companies experiencing strong declines in operating income must restructure operations or implement significant cost-cutting measures.\n"
+                "* **Financial Environment**: Challenging financial conditions are driving strong negative results. Companies need to focus on turnaround strategies to recover margins.\n"
+                "* **Global Conditions**: Globally, this trend could reflect deepening economic downturns or market disruptions. Businesses should prioritize risk management and adjust strategies to limit losses.\n"
+                "* **Strategy for Investors**: Investors should be wary of companies with strong negative operating income trends, reassessing their investment positions and considering alternative opportunities."
             )
         },
-         "correlation with EBITDA": {
+        "correlation with EBITDA": {
             "Slight Positive": (
                 "* **Economic Context**: A slight increase in EBITDA associated with this metric indicates minor improvements in operational efficiency or revenue generation in India. This suggests that the company is experiencing modest enhancements in its ability to generate earnings before interest, taxes, depreciation, and amortization. Globally, this trend may be due to gradual economic improvements or effective cost management strategies.\n"
                 "* **Business Strategies**: Companies may benefit from incremental gains in EBITDA through improved operational processes, slight revenue increases, or cost-saving measures. It is essential to continue focusing on optimizing operations and managing costs effectively.\n"
@@ -319,7 +320,7 @@ def get_detailed_interpretation(parameter_name, correlation_interpretation):
             ),
             "Neutral": (
                 "* **Economic Context**: A Neutral correlation with EBITDA suggests that changes in this metric are not significantly influenced by broader economic conditions in India. This indicates stable operational performance with no major fluctuations in EBITDA.\n"
-                "* **Business Strategies**: Companies are likely maintaining steady EBITDA with no significant changes in their earnings before interest, taxes, depreciation, and amortization. Strategies should focus on sustaining current performance and managing costs effectively.\n"
+                "* **Business Strategies**: Companies are likely to maintain steady EBITDA with no significant changes in their earnings before interest, taxes, depreciation, and amortization. Strategies should focus on sustaining current performance and managing costs effectively.\n"
                 "* **Financial Environment**: The financial environment is stable, with no major changes impacting EBITDA. Companies should continue to monitor their financial health and operational performance to maintain stability.\n"
                 "* **Global Conditions**: Globally, a neutral correlation indicates stability with no significant impacts on EBITDA. Companies should be aware of global trends but expect no major changes in their earnings.\n"
                 "* **Strategy for Investors**: Investors should maintain a steady approach, keeping an eye on the company’s EBITDA performance and broader economic conditions. While a neutral trend suggests stability, ongoing monitoring of any emerging trends is important."
@@ -339,7 +340,7 @@ def get_detailed_interpretation(parameter_name, correlation_interpretation):
                 "* **Strategy for Investors**: Investors should exercise extreme caution with companies showing strong negative correlations in EBITDA. It may be prudent to reassess investments, explore alternative opportunities, and closely monitor the company’s recovery strategies and financial health."
             )
         },
-        "correlation with EBIT": {
+            "correlation with EBIT": {
             "Slight Positive": (
                 "* **Economic Context**: A slight positive correlation with EBIT indicates minor improvements in operational profitability in India. This suggests that the company is experiencing modest gains in earnings before interest and taxes. Globally, this might be attributed to incremental economic growth or improvements in operational efficiencies.\n"
                 "* **Business Strategies**: Companies benefiting from a slight positive EBIT correlation should focus on enhancing operational efficiency and managing costs effectively. Small improvements in operational processes or revenue generation can positively impact EBIT.\n"
@@ -486,6 +487,42 @@ def get_detailed_interpretation(parameter_name, correlation_interpretation):
                 "* **Global Conditions**: Globally, this trend could be exacerbated by economic downturns or adverse market conditions. Companies should focus on risk management and explore strategies to navigate international challenges.\n"
                 "* **Strategy for Investors**: Investors should exercise extreme caution with companies showing strong negative correlations in Net Income. Reassessing investments, exploring alternative opportunities, and monitoring the company's recovery strategies closely is crucial."
             )
+        },"correlation with Net Income": {
+            "Slight Positive": (
+                "* **Economic Context**: A slight positive correlation with Net Income indicates that there are minor improvements in overall profitability. This suggests that the company's net income is experiencing small but favorable changes due to either operational efficiencies, increased revenues, or reduced costs.\n"
+                "* **Business Strategies**: Companies experiencing a slight positive correlation should continue focusing on enhancing operational efficiencies and cost management. Small improvements in various aspects of business operations are beneficial and should be leveraged for better financial outcomes.\n"
+                "* **Financial Environment**: A slight positive trend in Net Income implies generally stable financial conditions with incremental gains. Companies may benefit from favorable market conditions or cost controls that contribute to increased profitability.\n"
+                "* **Global Conditions**: Globally, this trend might be influenced by steady economic growth or favorable international market conditions. Companies can benefit from stable global conditions that support their profitability.\n"
+                "* **Strategy for Investors**: Investors should view the slight positive trend with cautious optimism. While the improvements are encouraging, they are not substantial enough to warrant major investment changes. Monitoring ongoing financial performance and market conditions is advised."
+            ),
+            "Strong Positive": (
+                "* **Economic Context**: A strong positive correlation with Net Income signifies substantial improvements in overall profitability. This indicates that the company is achieving significant gains in net income due to robust business performance, effective strategies, or favorable economic conditions.\n"
+                "* **Business Strategies**: Companies showing a strong positive correlation should focus on scaling successful strategies, capitalizing on favorable market conditions, and further improving operational efficiencies to sustain high levels of profitability.\n"
+                "* **Financial Environment**: A strong positive trend reflects excellent financial conditions, with significant gains in net income. This may result from increased revenues, cost reductions, or advantageous market conditions. Companies are likely experiencing improved financial health.\n"
+                "* **Global Conditions**: Globally, this trend could be driven by strong economic growth or favorable conditions in key markets. Companies should leverage international opportunities and favorable global conditions to enhance their profitability.\n"
+                "* **Strategy for Investors**: Investors should consider increasing their investments in companies with strong positive correlations in Net Income. Significant profitability growth is a positive sign, suggesting strong business performance and potential for high returns."
+            ),
+            "Neutral": (
+                "* **Economic Context**: A neutral correlation with Net Income suggests that changes in net income are not significantly impacted by broader economic conditions. This indicates stable profitability with no major fluctuations in performance.\n"
+                "* **Business Strategies**: Companies with a neutral correlation should focus on maintaining steady operational performance. Strategies should emphasize cost management and operational stability to ensure consistent profitability.\n"
+                "* **Financial Environment**: The financial environment is stable with no major impacts on Net Income. Companies may experience steady financial performance but should remain vigilant for any emerging trends or changes.\n"
+                "* **Global Conditions**: A neutral trend globally indicates stability in net income with no significant influences from international markets. Companies should monitor global conditions but expect consistent performance.\n"
+                "* **Strategy for Investors**: Investors should adopt a steady approach. While the neutral trend indicates stability, it is important to remain informed about potential changes in the economic environment that could affect profitability."
+            ),
+            "Slight Negative": (
+                "* **Economic Context**: A slight negative correlation with Net Income indicates minor declines in profitability. This suggests that the company is experiencing slight reductions in net income, possibly due to increased costs or decreased revenues.\n"
+                "* **Business Strategies**: Companies with a slight negative correlation should focus on addressing minor operational issues, controlling costs, and enhancing revenue streams. Small adjustments can help mitigate the negative impact on profitability.\n"
+                "* **Financial Environment**: A slight negative trend in Net Income suggests minor financial pressures. Companies may face slight challenges in maintaining profitability and should manage their financial resources carefully.\n"
+                "* **Global Conditions**: Globally, this trend might be influenced by minor economic challenges or market pressures. Companies should stay informed about international conditions that could affect their net income.\n"
+                "* **Strategy for Investors**: Investors should be cautious with companies showing slight negative correlations in Net Income. Evaluating the company’s strategies for addressing profitability declines and monitoring financial performance is important."
+            ),
+            "Strong Negative": (
+                "* **Economic Context**: A strong negative correlation with Net Income signifies significant declines in overall profitability. This suggests that the company is experiencing major reductions in net income due to severe operational or economic challenges.\n"
+                "* **Business Strategies**: Companies with a strong negative correlation may need to implement comprehensive strategies to address substantial operational or financial difficulties. This could involve major cost-cutting measures, restructuring, or strategic pivots to improve profitability.\n"
+                "* **Financial Environment**: A strong negative trend indicates challenging financial conditions, such as high costs or significant revenue declines. Companies need robust financial strategies to manage these challenges and improve their net income.\n"
+                "* **Global Conditions**: Globally, this trend could be exacerbated by economic downturns or adverse market conditions. Companies should focus on risk management and explore strategies to navigate international challenges.\n"
+                "* **Strategy for Investors**: Investors should exercise extreme caution with companies showing strong negative correlations in Net Income. Reassessing investments, exploring alternative opportunities, and monitoring the company's recovery strategies closely is crucial."
+            )
         },
         "correlation with Net Income Applicable to Common Share": {
             "Slight Positive": (
@@ -524,6 +561,80 @@ def get_detailed_interpretation(parameter_name, correlation_interpretation):
                 "* **Strategy for Investors**: Investors should exercise extreme caution with companies showing strong negative correlations in Net Income Applicable to Common Shares. Reassessing investments, exploring alternative opportunities, and monitoring the company's recovery strategies closely is crucial."
             )
         },
+         "correlation with Net Income From Continuing Operations": {
+            "Slight Positive": (
+                "* **Economic Context**: A slight positive correlation with Net Income From Continuing Operations suggests minor improvements in profitability from ongoing operations in India. This indicates that the company is seeing small gains in net income from its core business activities, reflecting modest positive changes in operational performance.\n"
+                "* **Business Strategies**: Companies with a slight positive correlation should continue to focus on enhancing core business operations and managing costs efficiently. Small improvements in revenue or operational efficiencies can further boost net income from continuing operations.\n"
+                "* **Financial Environment**: A slight positive trend in Net Income From Continuing Operations indicates generally favorable financial conditions with incremental gains. Companies may experience slight benefits from improved operational performance and cost management.\n"
+                "* **Global Conditions**: Globally, this trend could be influenced by stable or improving international markets, contributing to modest gains in net income from ongoing operations. Companies should leverage positive global conditions to enhance profitability.\n"
+                "* **Strategy for Investors**: Investors should view the slight positive trend with cautious optimism. While the improvements are encouraging, they may not be substantial enough to make major investment decisions. Monitoring operational performance and broader economic conditions is advisable."
+            ),
+            "Strong Positive": (
+                "* **Economic Context**: A strong positive correlation with Net Income From Continuing Operations signifies substantial improvements in profitability from ongoing operations in India. This suggests that the company is achieving significant gains in net income from its core business activities, driven by robust business performance and favorable economic conditions.\n"
+                "* **Business Strategies**: Companies experiencing strong positive correlations in Net Income From Continuing Operations are likely benefiting from major operational improvements, successful strategic initiatives, or significant revenue growth. Continued focus on strategic initiatives and operational excellence is crucial.\n"
+                "* **Financial Environment**: A strong positive trend indicates favorable financial conditions, such as increased profitability and improved operational efficiencies. Companies may see substantial gains in net income from continuing operations and better financial health.\n"
+                "* **Global Conditions**: On a global scale, this trend may be attributed to strong market conditions or economic growth. Companies should capitalize on these favorable conditions to further enhance their net income from continuing operations.\n"
+                "* **Strategy for Investors**: Investors should consider increasing investments in companies with strong positive correlations in Net Income From Continuing Operations. This reflects robust financial performance and potential for high returns. It’s advantageous to align with companies showing significant profitability growth."
+            ),
+            "Neutral": (
+                "* **Economic Context**: A neutral correlation with Net Income From Continuing Operations indicates that changes in this metric are not significantly influenced by broader economic conditions in India. This suggests stable profitability from ongoing operations with no major fluctuations.\n"
+                "* **Business Strategies**: Companies with a neutral correlation should focus on maintaining steady operational performance and managing costs effectively. There are no significant changes in net income to address.\n"
+                "* **Financial Environment**: The financial environment remains stable, with no major impacts on Net Income From Continuing Operations. Companies should continue to monitor their financial performance and operational efficiencies.\n"
+                "* **Global Conditions**: Globally, a neutral trend suggests stability in profitability from continuing operations with no major influences from international markets. Companies should stay informed of global economic conditions but expect no significant changes.\n"
+                "* **Strategy for Investors**: Investors should maintain a steady approach. While the neutral trend indicates stability, it's important to keep an eye on any emerging trends or changes in economic conditions that could impact future profitability."
+            ),
+            "Slight Negative": (
+                "* **Economic Context**: A slight negative correlation with Net Income From Continuing Operations indicates minor declines in profitability from ongoing operations in India. This suggests that the company is experiencing slight decreases in net income from its core business activities, potentially due to emerging operational or economic challenges.\n"
+                "* **Business Strategies**: Companies with a slight negative correlation should focus on addressing minor operational inefficiencies, managing costs, and exploring ways to improve net income. Small adjustments can help counteract the slight decline.\n"
+                "* **Financial Environment**: A slight negative trend reflects minor financial pressures, such as increased operational costs or slight revenue declines. Companies need to manage these pressures carefully to maintain profitability.\n"
+                "* **Global Conditions**: Globally, this trend might indicate minor economic or market pressures affecting net income from continuing operations. Companies should stay aware of international conditions that could impact their profitability.\n"
+                "* **Strategy for Investors**: Investors should be cautious about the slight negative trend and evaluate the company's strategies for addressing operational challenges. Assessing the company's ability to mitigate the decline and improve profitability is important."
+            ),
+            "Strong Negative": (
+                "* **Economic Context**: A strong negative correlation with Net Income From Continuing Operations indicates significant declines in profitability from ongoing operations in India. This suggests substantial reductions in net income from core business activities due to major operational or economic difficulties.\n"
+                "* **Business Strategies**: Companies with a strong negative correlation may be facing severe operational challenges or financial difficulties. Comprehensive strategies are needed to address major cost issues, enhance operational efficiencies, and improve net income from continuing operations.\n"
+                "* **Financial Environment**: A strong negative trend in Net Income From Continuing Operations points to challenging financial conditions, such as high costs or significant revenue declines. Companies must implement robust financial strategies to manage these challenges and improve their profitability.\n"
+                "* **Global Conditions**: Globally, this trend may reflect broader economic downturns or market disruptions affecting net income. Companies should focus on risk management and explore strategies to mitigate adverse effects.\n"
+                "* **Strategy for Investors**: Investors should exercise extreme caution with companies showing strong negative correlations in Net Income From Continuing Operations. It may be prudent to reassess investments, seek alternative opportunities, and monitor the company’s recovery strategies and financial health closely."
+            )
+        },
+        "correlation with Net Income": {
+            "Slight Positive": (
+                "* **Economic Context**: A slight positive correlation with Net Income indicates that there are minor improvements in overall profitability. This suggests that the company's net income is experiencing small but favorable changes due to either operational efficiencies, increased revenues, or reduced costs.\n"
+                "* **Business Strategies**: Companies experiencing a slight positive correlation should continue focusing on enhancing operational efficiencies and cost management. Small improvements in various aspects of business operations are beneficial and should be leveraged for better financial outcomes.\n"
+                "* **Financial Environment**: A slight positive trend in Net Income implies generally stable financial conditions with incremental gains. Companies may benefit from favorable market conditions or cost controls that contribute to increased profitability.\n"
+                "* **Global Conditions**: Globally, this trend might be influenced by steady economic growth or favorable international market conditions. Companies can benefit from stable global conditions that support their profitability.\n"
+                "* **Strategy for Investors**: Investors should view the slight positive trend with cautious optimism. While the improvements are encouraging, they are not substantial enough to warrant major investment changes. Monitoring ongoing financial performance and market conditions is advised."
+            ),
+            "Strong Positive": (
+                "* **Economic Context**: A strong positive correlation with Net Income signifies substantial improvements in overall profitability. This indicates that the company is achieving significant gains in net income due to robust business performance, effective strategies, or favorable economic conditions.\n"
+                "* **Business Strategies**: Companies showing a strong positive correlation should focus on scaling successful strategies, capitalizing on favorable market conditions, and further improving operational efficiencies to sustain high levels of profitability.\n"
+                "* **Financial Environment**: A strong positive trend reflects excellent financial conditions, with significant gains in net income. This may result from increased revenues, cost reductions, or advantageous market conditions. Companies are likely experiencing improved financial health.\n"
+                "* **Global Conditions**: Globally, this trend could be driven by strong economic growth or favorable conditions in key markets. Companies should leverage international opportunities and favorable global conditions to enhance their profitability.\n"
+                "* **Strategy for Investors**: Investors should consider increasing their investments in companies with strong positive correlations in Net Income. Significant profitability growth is a positive sign, suggesting strong business performance and potential for high returns."
+            ),
+            "Neutral": (
+                "* **Economic Context**: A neutral correlation with Net Income suggests that changes in net income are not significantly impacted by broader economic conditions. This indicates stable profitability with no major fluctuations in performance.\n"
+                "* **Business Strategies**: Companies with a neutral correlation should focus on maintaining steady operational performance. Strategies should emphasize cost management and operational stability to ensure consistent profitability.\n"
+                "* **Financial Environment**: The financial environment is stable with no major impacts on Net Income. Companies may experience steady financial performance but should remain vigilant for any emerging trends or changes.\n"
+                "* **Global Conditions**: A neutral trend globally indicates stability in net income with no significant influences from international markets. Companies should monitor global conditions but expect consistent performance.\n"
+                "* **Strategy for Investors**: Investors should adopt a steady approach. While the neutral trend indicates stability, it is important to remain informed about potential changes in the economic environment that could affect profitability."
+            ),
+            "Slight Negative": (
+                "* **Economic Context**: A slight negative correlation with Net Income indicates minor declines in profitability. This suggests that the company is experiencing slight reductions in net income, possibly due to increased costs or decreased revenues.\n"
+                "* **Business Strategies**: Companies with a slight negative correlation should focus on addressing minor operational issues, controlling costs, and enhancing revenue streams. Small adjustments can help mitigate the negative impact on profitability.\n"
+                "* **Financial Environment**: A slight negative trend in Net Income suggests minor financial pressures. Companies may face slight challenges in maintaining profitability and should manage their financial resources carefully.\n"
+                "* **Global Conditions**: Globally, this trend might be influenced by minor economic challenges or market pressures. Companies should stay informed about international conditions that could affect their net income.\n"
+                "* **Strategy for Investors**: Investors should be cautious with companies showing slight negative correlations in Net Income. Evaluating the company’s strategies for addressing profitability declines and monitoring financial performance is important."
+            ),
+            "Strong Negative": (
+                "* **Economic Context**: A strong negative correlation with Net Income signifies significant declines in overall profitability. This suggests that the company is experiencing major reductions in net income due to severe operational or economic challenges.\n"
+                "* **Business Strategies**: Companies with a strong negative correlation may need to implement comprehensive strategies to address substantial operational or financial difficulties. This could involve major cost-cutting measures, restructuring, or strategic pivots to improve profitability.\n"
+                "* **Financial Environment**: A strong negative trend indicates challenging financial conditions, such as high costs or significant revenue declines. Companies need robust financial strategies to manage these challenges and improve their net income.\n"
+                "* **Global Conditions**: Globally, this trend could be exacerbated by economic downturns or adverse market conditions. Companies should focus on risk management and explore strategies to navigate international challenges.\n"
+                "* **Strategy for Investors**: Investors should exercise extreme caution with companies showing strong negative correlations in Net Income. Reassessing investments, exploring alternative opportunities, and monitoring the company's recovery strategies closely is crucial."
+            )
+        },
         "correlation with EPS (Earnings Per Share)": {
             "Slight Positive": (
                 "* **Economic Context**: A slight positive correlation with EPS indicates minor improvements in earnings per share. This suggests that the company's earnings available to each shareholder have experienced small but positive changes, potentially due to improved business operations or cost management.\n"
@@ -560,9 +671,10 @@ def get_detailed_interpretation(parameter_name, correlation_interpretation):
                 "* **Global Conditions**: Globally, this trend could be exacerbated by economic downturns, adverse market conditions, or geopolitical issues. Companies should focus on risk management and explore strategies to mitigate the global challenges affecting their EPS.\n"
                 "* **Strategy for Investors**: Investors should exercise extreme caution with companies showing strong negative correlations in EPS. Reassessing investments, exploring alternative opportunities, and closely monitoring the company's recovery strategies is crucial."
             )
-        }
     }
+}
     return interpretations.get(parameter_name, {}).get(correlation_interpretation, "No interpretation available.")
+
 
 # Function to get the latest financial data
 def get_latest_financial_data(stock_name):
@@ -581,7 +693,7 @@ def get_latest_financial_data(stock_name):
         return pd.Series(), pd.Series(), pd.Series()
 
 # Streamlit App Interface
-st.title('Industry and Financial Data Prediction')
+st.title('Adhuniq Industry and Financial Data Prediction')
 st.sidebar.header('Select Options')
 
 selected_industry = st.sidebar.selectbox(
@@ -589,6 +701,29 @@ selected_industry = st.sidebar.selectbox(
     list(indicators.keys()),  # Use the keys from the indicators dictionary
     index=0  # Default index if needed, here 'Manufacture of Food Products'
 )
+
+# Interpret industry impact
+def get_industry_impact(parameter_change):
+    impact_details = {
+        'Increase': {
+            'Risks Associated': 'Overproduction, spoilage',
+            'Impact of Risks on Industry': 'Increased costs and reduced profit margins',
+            'Mitigation Strategies': 'Adjust production based on demand forecasts'
+        },
+        'Decrease': {
+            'Risks Associated': 'Reduced supply, increased competition',
+            'Impact of Risks on Industry': 'Loss of market share and revenue',
+            'Mitigation Strategies': 'Diversify suppliers; strengthen marketing strategies'
+        }
+    }
+    return impact_details.get(parameter_change, {})
+
+# New Feature: Input for CPI and Interest Rate
+expected_cpi = st.sidebar.number_input('Expected CPI (%):', min_value=0.0, value=4.0)
+expected_interest_rate = st.sidebar.number_input('Expected RBI Interest Rate (%):', min_value=0.0, value=6.0)
+
+# Scenario Selection
+scenario = st.sidebar.selectbox('Select Scenario', ['Base Case', 'Best Case', 'Worst Case'])
 
 if selected_industry:
     # Normalize and match the industry name with sheet names
@@ -664,13 +799,24 @@ if selected_industry:
             future_reg_pred = reg_model.predict(input_df)
             future_rf_pred = rf_model.predict(input_df)
 
-            st.write(f"Linear Regression Prediction: {future_reg_pred[0]:.2f}")
-            st.write(f"Random Forest Prediction: {future_rf_pred[0]:.2f}")
+                        # Adjust predictions based on selected scenario
+            adjustment_factors = {
+                'Base Case': 1.0,
+                'Best Case': 1.1,  # 10% increase for best case
+                'Worst Case': 0.9,  # 10% decrease for worst case
+            }
+
+            adjusted_reg_pred = future_reg_pred * adjustment_factors[scenario]
+            adjusted_rf_pred = future_rf_pred * adjustment_factors[scenario]
+
+            # Impact Analysis based on CPI and Interest Rate
+            adjusted_industry_value = adjusted_reg_pred[0] * (1 - (expected_cpi / 100)) * (1 - (expected_interest_rate / 100))
+            st.write(f"Adjusted Prediction considering CPI and Interest Rate ({scenario}): {adjusted_industry_value:.2f}")
 
             # Display Latest Data
-            st.subheader('Industry and Indicator Data')
+            st.subheader('Adhuniq Industry and Indicator Data')
 
-                        # Industry Data
+            # Industry Data
             latest_industry_data = iip_data[[selected_industry]].tail()  # Show the last few rows
             st.write('**Industry Data:**')
             st.write(latest_industry_data)
@@ -712,7 +858,7 @@ if selected_industry:
 
                             industry_mean = y.mean()
                             updated_corr_data = stock_correlation_data.copy()
-                            updated_corr_data['Predicted Industry Value'] = future_reg_pred[0]
+                            updated_corr_data['Predicted Industry Value'] = adjusted_industry_value
 
                             for col in [
                                 'correlation with Total Revenue/Income',
@@ -737,8 +883,14 @@ if selected_industry:
                                 'Annualized correlation with Net Income From Continuing Operation',
                                 'Annualized correlation with Net Income',
                                 'Annualized correlation with Net Income Applicable to Common Share',
-                                'Annualized correlation with EPS (Earning Per Share)'
-                            ]:
+                                'Annualized correlation with EPS (Earning Per Share)',
+                                'Total Revenue/Income Coefficient', 'Total Operating Expense Coefficient', 
+                'Operating Income/Profit Coefficient', 'EBITDA Coefficient', 'EBIT Coefficient',
+                'Income/Profit Before Tax Coefficient', 'Net Income From Continuing Operation Coefficient',
+                'Net Income Coefficient', 'Net Income Applicable to Common Share Coefficient',
+                'EPS (Earning Per Share) Coefficient', 'Operating Margin Coefficient', 'EBITDA Margin Coefficient',
+                'Net Profit Margin Coefficient'
+            ]:
                                 if col in updated_corr_data.columns:
                                     updated_corr_data[f'Interpreted {col}'] = updated_corr_data[col].apply(interpret_correlation)
                                     updated_corr_data[f'Adjusted {col}'] = updated_corr_data.apply(
@@ -816,6 +968,7 @@ if selected_industry:
                                     'Adjusted correlation with EBIT',
                                     'Adjusted correlation with Income/Profit Before Tax',
                                     'Adjusted correlation with Net Income From Continuing Operation',
+                                    'Adjusted correlation with Net Income',
                                     'Adjusted correlation with Net Income Applicable to Common Share',
                                     'Adjusted correlation with EPS (Earning Per Share)'
                                 ]
@@ -838,7 +991,7 @@ if selected_industry:
                                 if not income_statement_data.empty:
                                     st.write("**Income Statement (Jun 2024):**")
                                     st.write(income_statement_data)
-                                
+                                  
                                 # Display the full predicted results
                                 st.write(f"**Predicted Income Statement Results for {stock}:**")
                                 st.write(predicted_results_df)
@@ -877,5 +1030,3 @@ if selected_industry:
 
 else:
     st.error('No correlation results available.')
-
-           
